@@ -1,0 +1,156 @@
+nav{
+    background: #212731;
+    color: #D1D6DA;
+    padding: 13px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    width: 780px;
+    margin-left: 180px;
+    justify-content: center;
+    column-gap: 60px;
+    align-items: center;
+}
+
+.searchContainer{
+    position: relative;
+}
+
+#searchBar{
+    border-radius: 8px;
+    border: 1px solid;
+    width: 258px;
+    height: 37px;
+    outline: 0;
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+.searchIcon{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color : #626E79;
+}
+
+#searchIconMini{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color : #626E79;
+    display: none;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.nav-link{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menuBar{
+    display: none;
+}
+
+.nav-linkContainer{
+    display: flex;
+    gap: 35px;
+}
+
+@media (max-width:300px) {
+   #searchBar{
+        display: block;
+        width: 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+        transform-origin: left;
+    }
+
+    #searchBar.showBar{
+        transform: scaleX(1);
+        width: 150px;
+        background-color: white;
+    }
+
+    #searchIconMini{
+        display: block;
+    }
+
+    #searchIcon{
+        display: none;
+    }
+}
+
+@media (min-width:300px) and (max-width:399px) {
+    #searchBar{
+        width: 190px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav{
+        position: relative;
+        padding: 13px 10px;
+    }
+
+    .navbar{
+        justify-content: space-between;
+        margin-left: 0;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-link{
+        margin-bottom: 10px;
+    }
+
+    .menuBar{
+        display: block;
+    }
+    
+
+    .nav-linkContainer{
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #212731;
+        padding: 20px 10px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .nav-linkContainer.show{
+        transform: scaleY(1);
+    }
+
+
+}
