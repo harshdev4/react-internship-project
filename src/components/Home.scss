@@ -9,9 +9,11 @@
     display: flex;
     width: 82%;
     justify-content: space-between;
+    column-gap: 35px;
 }
 
 .link{
+    min-width: fit-content;
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
@@ -65,16 +67,6 @@
 }
 
 @media (max-width:599px){
-    .linkContainer{
-        padding-left: 0;
-    }
-    
-    .links{
-        overflow-x: scroll;
-        column-gap: 20px;
-        width: 100%;
-    }
-
     .homeDealHeading{
         font-size: 1.6rem;
     }
@@ -85,5 +77,17 @@
 
     .signUpBtn{
         padding: 16px;
+    }
+}
+
+@media (max-width:699px){
+    .linkContainer{
+        padding-left: 0;
+    }
+    
+    .links{
+        overflow-x: scroll;
+        column-gap: 20px;
+        width: 100%;
     }
 }
